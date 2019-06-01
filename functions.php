@@ -8,13 +8,14 @@
     if($connection->connect_error) die("Fatal Error");
 
     function createTable($name, $query) {
-        queryMysql("CREATE TABLE IF NONE EXISTS $name($query)");
+        queryMysql("CREATE TABLE IF NOT EXISTS $name($query)");
         echo "Table '$name' created or already exists.<br>";
     }
 
     function queryMysql($query) {
         global $connection;
         $result = $connection->query($query);
+        var_dump($result, $connection, $query);
         if(!$result) die("Fatal Error");
         return $result;
     }
