@@ -56,7 +56,7 @@ echo <<<_END
             </div>
             <div data-role='fieldcontain'>
                 <label></label>
-                <input data-transition='slide' type='submit' value='Sign Up'>
+                <input data-transition='slide' type='submit' value='Sign Up' />
             </div>
         </div>
     </body>
